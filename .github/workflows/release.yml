@@ -9,7 +9,7 @@ on:
 
 jobs:
   release:
-    if: ${{ github.event.label.name == 'deployment' }}
+    if: ${{ (github.event.pull_request.merged == true) && (contains(github.event.pull_request.labels.*.name, 'deployment')) }}
     permissions:
       contents: write # to push chart release and create a release (helm/chart-releaser-action)
 
