@@ -1,12 +1,16 @@
 name: Release Charts
 
 on:
-  push:
+  pull_request:
+    types:
+      - labeled
+      - closed
     branches:
       - main
 
 jobs:
   release:
+    if: ${{ github.event.label.name == 'deployment' }}
     permissions:
       contents: write # to push chart release and create a release (helm/chart-releaser-action)
 
