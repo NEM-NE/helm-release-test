@@ -3,7 +3,6 @@ name: Release Charts
 on:
   pull_request:
     types:
-      - labeled
       - closed
     branches:
       - main
