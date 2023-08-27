@@ -1,0 +1,5 @@
+token: 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
+git-base-url: https://api.github.com/
+git-upload-url: https://uploads.github.com/
+owner: NEM-NE
+git-repo: helm-release-test
